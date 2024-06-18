@@ -21,7 +21,7 @@ if uploaded_image is not None:
             uploaded_image.seek(0)
 
             # Send POST request to the API using FormData
-            response = requests.post("http://localhost:5000/classify", files={"image": uploaded_image})
+            response = requests.post("http://backend:5000/classify", files={"image": uploaded_image})
 
             if response.status_code == 200:
                 # Parse the JSON response
