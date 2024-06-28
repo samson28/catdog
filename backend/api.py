@@ -19,7 +19,6 @@ class UploadImage(Resource):
         if image_file:
             # Load and compile the model
             cnn = tf.keras.models.load_model('cat_dog.h5')
-            cnn.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
             try:
                 # Open and preprocess the image
